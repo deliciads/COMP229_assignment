@@ -1,0 +1,21 @@
+
+/* Home page */
+.welcome-msg {
+  width: 350px;
+  position: relative;
+  left: 500px;
+  top: 150px;
+}
+
+.mission {
+  width: 350px;
+  position: relative;
+  left: 900px;
+  bottom: -15px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
