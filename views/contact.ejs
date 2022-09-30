@@ -8,12 +8,16 @@
     <h1 class="display-4"> Contact</h1>
   </div>
 
-  <!--Section: Contact v.2-->
-<section class="mb-4">
+  <br>
+
+    <!--Section: Contact v.2-->
+    <section class="mb-5">
 
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly.</p>
 
+
+<div class="contact-card">
     <div class="row">
 
         <!--Grid column-->
@@ -21,7 +25,7 @@
             <form id="contact-form" name="contact-form" method="GET" action="/process_get">
 
                 <!--Grid row-->
-                <div class="row">
+                <div class="row" style="margin-top: 27px">
 
                     <!--Grid column-->
                     <div class="col-md-6">
@@ -30,6 +34,7 @@
                             <label for="name" class="">First Name</label>
                         </div>
                     </div>
+                    
                     <!--Grid column-->
 
                     <!--Grid column-->
@@ -45,7 +50,7 @@
                 <!--Grid row-->
 
                 <!--Grid row-->
-                <div class="row">
+                <div class="row" style="margin-top: 30px">
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="email" id="email" name="email" class="form-control">
@@ -61,7 +66,7 @@
                     </div>
                 </div>
                 <!--Grid row-->
-                <div class="row">
+                <div class="row" style="margin-top: 30px">
 
                     <!--Grid column-->
                     <div class="col-md-12">
@@ -78,8 +83,7 @@
             </form>
 
             <div class="text-center text-md-left">
-                <!--<a class="btn btn-primary">Submit</a>-->
-                <input type="submit" value="Submit">
+                <a class="btn btn-primary" id="submit-btn" href="/about" role="button">Submit</a>
 
             </div>
             <div class="status"></div>
@@ -106,8 +110,17 @@
 
     </div>
 
+    </div>
+
 </section>
 <!--Section: Contact v.2-->
+
+</main>
+
+<br>
+<br>
+
+
 
 <%- include partials/bottom_nav.ejs %>
 
