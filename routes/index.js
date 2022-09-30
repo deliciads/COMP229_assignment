@@ -1,3 +1,10 @@
+/* 
+  File name: COMP229_assignment
+  Student Name: Delicia
+  Student id: 301294501
+  Date: 30th September 2022
+*/
+
 var express = require('express');
 const app = require('../app');
 var router = express.Router();
@@ -32,6 +39,12 @@ router.get('/services', function(req, res, next) {
 /* GET contact page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact'});
+});
+
+/* redirect to home page */
+router.post("/contact", function (req, res) {
+  res.redirect("/");
+  console.log();
 });
 
 module.exports = router;
