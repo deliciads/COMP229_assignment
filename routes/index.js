@@ -41,10 +41,18 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact'});
 });
 
-/* redirect to home page */
+/* Get contact details and redirect to home */
 router.post("/contact", function (req, res) {
   res.redirect("/");
-  console.log();
+  response = {
+    fname: req.query.fname,
+    lname: req.query.lname,
+    email: req.query.email,
+    number: req.query.number,
+    message: req.query.message,
+  };
+  console.log(response);
+  res.end(JSON.stringify(response));
 });
 
 module.exports = router;
