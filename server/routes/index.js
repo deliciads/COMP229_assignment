@@ -6,7 +6,7 @@
 */
 
 var express = require('express');
-const app = require('../app');
+//const app = require('../app');
 var router = express.Router();
 
 //var fs = require('fs');
@@ -42,7 +42,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 /* Get contact details and redirect to home */
-router.post("/contact", function (req, res) {
+/*router.post("/contact", function (req, res) {
   res.redirect("/");
   response = {
     fname: req.query.fname,
@@ -54,5 +54,6 @@ router.post("/contact", function (req, res) {
   console.log(response);
   res.end(JSON.stringify(response));
 });
+*/
 
 module.exports = router;
