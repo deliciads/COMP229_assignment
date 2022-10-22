@@ -5,41 +5,43 @@
   Date: 30th September 2022
 */
 
-var express = require('express');
-//const app = require('../app');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-//var fs = require('fs');
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+let indexController = require('../controllers/index');
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+router.get('/', indexController.displayHomePage);
 
-/* GET about page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About'});
-});
+/* GET home page. */
+router.get('/home', indexController.displayHomePage);
 
-/* GET projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects'});
-});
+/* GET About Us page. */
+router.get('/about', indexController.displayAboutPage);
 
-/* GET services page. */
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services'});
-});
+/* GET Products page. */
+router.get('/products', indexController.displayProductsPage);
 
-/* GET contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact'});
-});
+/* GET Services page. */
+router.get('/services', indexController.displayServicesPage);
+
+/* GET Contact Us page. */
+router.get('/contact', indexController.displayContactPage);
+
+/* GET Route for displaying the Login page */
+router.get('/login', indexController.displayLoginPage);
+
+/* POST Route for processing the Login page */
+router.post('/login', indexController.processLoginPage);
+
+/* GET Route for displaying the Register page */
+router.get('/register', indexController.displayRegisterPage);
+
+/* POST Route for processing the Register page */
+router.post('/register', indexController.processRegisterPage);
+
+/* GET to perform UserLogout */
+router.get('/logout', indexController.performLogout);
 
 /* Get contact details and redirect to home */
 /*router.post("/contact", function (req, res) {

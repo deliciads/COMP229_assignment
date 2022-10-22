@@ -23,27 +23,27 @@ let User = mongoose.Schema
         */
        email:
        {
-        type: String,
-        default: '',
-        trim: true,
-        required: 'email address is required'
+            type: String,
+            default: '',
+            trim: true,
+            required: 'email address is required'
        },
        displayName:
        {
-        type: String,
-        default: '',
-        trim: true,
-        required: 'Display name is required'
+            type: String,
+            default: '',
+            trim: true,
+            required: 'Display name is required'
        },
        created:
        {
-        type: Date,
-        default: Date.now,
+            type: Date,
+            default: Date.now,
        },
-       updated:
+       update:
        {
-        type: Date,
-        default: Date.now,
+            type: Date,
+            default: Date.now,
        }
     },
     {
