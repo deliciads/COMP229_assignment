@@ -6,7 +6,7 @@ let jwt = require('jsonwebtoken');
 
 let passport = require('passport');
 
-let bookController = require('../controllers/contact');
+let contactController = require('../controllers/contact');
 
 // helper function for guard purposes
 function requireAuth(req, res, next)
@@ -26,15 +26,15 @@ router.get('/', contactController.displayContactList);
 router.get('/add', requireAuth, contactController.displayAddPage);
 
 // GET Route for displaying the Add page - CREATE Operation 
-router.get('/add', requireAuth, contactController.processAddPage);
+router.post('/add', requireAuth, contactController.processAddPage);
 
 // GET Route for displaying the Edit page - CREATE Operation 
 router.get('/edit/:id', requireAuth, contactController.displayEditPage);
 
 // GET Route for processing the Edit page - CREATE Operation
-router.get('/edit/:id', requireAuth, contactController.processEditPage);
+router.post('/edit/:id', requireAuth, contactController.processEditPage);
 
 /* GET to perform  Deletion - DELETE Operation */
-router.get('/delete/:id', requireAuth, bookController.performDelete);
+router.get('/delete/:id', requireAuth, contactController.performDelete);
 
 module.exports = router;

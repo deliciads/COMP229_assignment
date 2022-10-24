@@ -5,10 +5,10 @@ let mongoose = require('mongoose');
 let jwt = require('jsonwebtoken');
 
 // create a reference to the model
-let Book = require('../models/contact');
+let Contact = require('../models/contact');
 
-module.exports.displayContackList = (req, res, next) => {
-    Contack.find((err, contactList) => {
+module.exports.displayContactList = (req, res, next) => {
+    Contact.find((err, contactList) => {
         if(err)
         {
             return console.error(err);
@@ -45,7 +45,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the contact list
             res.redirect('/contact');
         }
     });
@@ -110,3 +110,6 @@ module.exports.performDelete = (req, res, next) => {
         }
     });
 }
+
+
+
