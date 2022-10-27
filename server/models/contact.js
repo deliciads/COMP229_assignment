@@ -1,3 +1,10 @@
+/* 
+  File name: COMP229_assignment
+  Student Name: Delicia
+  Student id: 301294501
+  Date: 31st October 2022
+*/
+
 let mongoose = require('mongoose');
 
 //create a model class
