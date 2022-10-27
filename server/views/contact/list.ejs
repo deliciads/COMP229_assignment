@@ -8,22 +8,26 @@
         <div class="offset-md-1 col-md-11">
             <h1><%= title %></h1>
 
+            <br>
+
             <% if(typeof displayName == 'string' && displayName) { %>
                 <a href="/contact/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add a Contact</a>
             <% } %>
             <br>
+            <br>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <% if(typeof displayName == 'string' && displayName) { %>
-                        <th class="text-center col-2">Name</th>
-                        <th class="text-center col-2">Contact number</th>
-                        <th class="text-center col-2">Email</th>
+                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-3">Contact number</th>
+                        <th class="text-center col-3">Email</th>
+                        <th class="text-center col-2"></th>
                     <% } else { %>
-                        <th class="text-center col-2">Name</th>
-                        <th class="text-center col-2">Contact number</th>
-                        <th class="text-center col-2">Email</th>
+                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-3">Contact number</th>
+                        <th class="text-center col-3">Email</th>
                     <% } %>
                 </tr>
 
@@ -32,9 +36,9 @@
                 <% for(let count = 0; count < ContactList.length; count++) { %>
                     <tr class="d-flex">
                         <% if(typeof displayName == 'string' && displayName) { %>
-                            <td class="text-center col-2"><%= ContactList[count].name %></td>
-                            <td class="text-center col-2"><%= ContactList[count].number %></td>
-                            <td class="text-center col-2"><%= ContactList[count].email %></td>
+                            <td class="text-center col-3"><%= ContactList[count].name %></td>
+                            <td class="text-center col-3"><%= ContactList[count].number %></td>
+                            <td class="text-center col-3"><%= ContactList[count].email %></td>
                             <td class="text-center col-1">
                                 <a href="/contact/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
@@ -44,9 +48,9 @@
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
                         <% } else { %>
-                            <td class="text-center col-2"><%= ContactList[count].name %></td>
-                            <td class="text-center col-2"><%= ContactList[count].number %></td>
-                            <td class="text-center col-2"><%= ContactList[count].email %></td>
+                            <td class="text-center col-3"><%= ContactList[count].name %></td>
+                            <td class="text-center col-3"><%= ContactList[count].number %></td>
+                            <td class="text-center col-3"><%= ContactList[count].email %></td>
                         <% } %>
                     </tr>
                 <% } %>
@@ -54,6 +58,15 @@
         </div>
     </div>
   </main>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 <%- include ../partials/bottom_nav.ejs %>  
 
